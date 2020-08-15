@@ -23,12 +23,16 @@ function Pilha() {
         }
     }
     this.menorElemento = () => {
+        /* Primeiro codigo feito
         if (this.pilha.length > 0) {
             //ordena a pilha; ps: uma vez que o sort() ordena um array em ordem alfabética passo a condicao callback
             this.pilha.sort((a,b)=>a-b);
             //retorna menor valor
             return this.pilha[0];
-        }
+        }*/
+
+        //atualizacao
+        return Math.min.apply(Math, this.pilha);
     }
 }
 
@@ -45,6 +49,7 @@ p.insere(8);
 p.insere(2);
 p.insere(9);
 p.insere(30);
+p.insere(-45);
 p.insere(0);
 
 console.log(p);
